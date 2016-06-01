@@ -81,7 +81,6 @@ app.post('/store', function(req, res) {
                   }  
                 ]
               });
-                'Track added: );
             }, function(err) {
               return res.send(err.message);
             });
