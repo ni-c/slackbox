@@ -74,12 +74,7 @@ app.post('/store', function(req, res) {
             .then(function(data) {
               return res.send({
                 "response_type": "in_channel",
-                "text": "*" + req.body.user_name + "* added a track to the playlist.",
-                "attachments": [
-                  {
-                    "text": "*" + track.name + "* by *" + track.artists[0].name + "*"
-                  }  
-                ]
+                "text": "Added *" + track.name + "* by *" + track.artists[0].name + "* to the playlist."
               });
             }, function(err) {
               return res.send(err.message);
